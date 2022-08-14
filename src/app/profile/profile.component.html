@@ -1,0 +1,43 @@
+
+
+
+<div class="buttonss">
+<table>
+    <tr><td>
+    <form (submit)="onChangeName(EditNameForm)" #EditNameForm="ngForm" >
+    <input matInput name="name" ngModel type="text" placeholder={{name}} #nameInput="ngModel">
+    <button class="editbtn" type="submit">Change Name</button>
+    </form>
+    </td></tr>
+
+        <tr><td>
+    <form (submit)="onChangePhone(EditPhoneForm)" #EditPhoneForm="ngForm" >
+    <input matInput name="phone" type="phone" ngModel  placeholder={{phone}} #nameInput="ngModel">
+    <button class="editbtn" type="submit">Change Phone</button>
+    </form>
+    </td></tr>
+
+
+
+    <tr><td>
+    <form (submit)="onChangeEmail(EditEmailForm)" #EditEmailForm="ngForm" >
+    <input matInput name="email" type="email" ngModel  placeholder={{email}} #emailInput="ngModel">
+    <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+    <button class="editbtn" type="submit">Change E-Mail</button>
+    </form>
+    </td></tr>
+
+
+
+    <tr><td>
+    <form (submit)="onChangePassword(EditPasswordlForm)" #EditPasswordlForm="ngForm" >
+    <input name="password" type="password" ngModel matInput placeholder="********" #passwordInput="ngModel" >
+    <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+    <button class="editbtn" type="submit">Change Password</button>
+    </form>
+    </td></tr>
+
+</table>
+<div>
+
+</div>
